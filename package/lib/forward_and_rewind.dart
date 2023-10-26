@@ -1,4 +1,4 @@
-import 'package:flutter_meedu_videoplayer/bar.dart';
+import 'package:universal_videoplayer/bar.dart';
 import 'package:flutter/material.dart';
 
 class ForwardAndRewindStyle {

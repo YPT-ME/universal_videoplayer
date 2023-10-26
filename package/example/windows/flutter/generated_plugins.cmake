@@ -4,11 +4,11 @@
 
 list(APPEND FLUTTER_PLUGIN_LIST
   desktop_drop
-  flutter_meedu_videoplayer
   fullscreen_window
   fvp
   screen_brightness_windows
   screen_retriever
+  universal_videoplayer
   window_manager
 )
 

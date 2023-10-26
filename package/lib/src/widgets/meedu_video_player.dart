@@ -1,10 +1,12 @@
+import 'dart:developer';
+
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_meedu_videoplayer/meedu_player.dart';
-import 'package:flutter_meedu_videoplayer/src/widgets/styles/controls_container.dart';
-import 'package:flutter_meedu_videoplayer/src/widgets/styles/primary/primary_list_player_controls.dart';
-import 'package:flutter_meedu_videoplayer/src/widgets/styles/primary/primary_player_controls.dart';
-import 'package:flutter_meedu_videoplayer/src/widgets/styles/secondary/secondary_player_controls.dart';
+import 'package:universal_videoplayer/meedu_player.dart';
+import 'package:universal_videoplayer/src/widgets/styles/controls_container.dart';
+import 'package:universal_videoplayer/src/widgets/styles/primary/primary_list_player_controls.dart';
+import 'package:universal_videoplayer/src/widgets/styles/primary/primary_player_controls.dart';
+import 'package:universal_videoplayer/src/widgets/styles/secondary/secondary_player_controls.dart';
 import '../helpers/shortcuts/intent_action_map.dart';
 
 /// An ActionDispatcher that logs all the actions that it invokes.
@@ -194,7 +196,7 @@ class _MeeduVideoPlayerState extends State<MeeduVideoPlayer> {
                             (__) {
                           if (widget
                               .controller.forceUIRefreshAfterFullScreen.value) {
-                            print("NEEDS TO REFRASH UI");
+                            log("NEEDS TO REFRASH UI");
                             refresh();
                             widget.controller.forceUIRefreshAfterFullScreen
                                 .value = false;

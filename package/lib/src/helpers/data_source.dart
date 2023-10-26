@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'package:flutter_meedu_videoplayer/meedu_player.dart';
+import 'package:universal_videoplayer/meedu_player.dart';
 
 class DataSource {
   File? file;
