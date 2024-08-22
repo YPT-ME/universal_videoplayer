@@ -16,6 +16,9 @@ import 'package:volume_controller/volume_controller.dart';
 import 'package:universal_platform/universal_platform.dart';
 import 'package:wakelock_plus/wakelock_plus.dart';
 import 'package:window_manager/window_manager.dart';
+import 'package:flutter/src/material/motion.dart' as flutter_motion;
+import 'package:universal_videoplayer/src/helpers/durations.dart'
+    as custom_durations;
 
 /// An enumeration of the different styles that can be applied to controls, such
 /// as buttons and icons and layouts.
@@ -281,7 +284,7 @@ class MeeduPlayerController {
   /// such as fade-in and fade-out durations, overlay show/hide animations, and more.
   /// By modifying these durations, you can adjust the visual appearance and behavior
   /// of the video player's animations according to your preferences.
-  final Durations durations;
+  final custom_durations.Durations durations;
 
   /// Controls the visibility of player overlays.
   ///
@@ -330,7 +333,7 @@ class MeeduPlayerController {
     this.enabledOverlays = const EnabledOverlays(),
     this.customCallbacks = const CustomCallbacks(),
     Responsive? responsive,
-    this.durations = const Durations(),
+    this.durations = const custom_durations.Durations(),
     this.onVideoPlayerClosed,
     BoxFit? initialFit,
   }) : _videoFit = Rx(initialFit ?? BoxFit.fill) {
